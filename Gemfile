@@ -20,6 +20,7 @@ gem 'haml-rails'
 gem 'simple_form'
 gem 'therubyracer', :platform=>:ruby
 gem 'carrierwave'
+gem 'rmagick'
 group :development do
   gem 'html2haml'
   gem 'hub', :require=>nil
