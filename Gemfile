@@ -19,6 +19,7 @@ gem 'devise'
 gem 'haml-rails'
 gem 'simple_form'
 gem 'therubyracer', :platform=>:ruby
+gem 'carrierwave'
 group :development do
   gem 'html2haml'
   gem 'hub', :require=>nil
