@@ -5,7 +5,8 @@
   = @photo.title
 %p
   %b Image:
-  = @photo.image
+  = image_tag @photo.image_url() if @photo.image?
+
 
 = link_to 'Edit', edit_photo_path(@photo)
 \|

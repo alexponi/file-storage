@@ -1,10 +1,11 @@
 %h1 Listing photos
 
-%table
+%table{:width => "100%"}
   %thead
     %tr
       %th Title
       %th Image
+      %th
       %th
       %th
       %th
@@ -13,7 +14,8 @@
     - @photos.each do |photo|
       %tr
         %td= photo.title
-        %td= photo.image
+        %td= URI.decode(photo.image.to_s)
+        %td{:style => "padding:5px;"}= image_tag photo.image_url(:thumb) if photo.image?
         %td= link_to 'Show', photo
         %td= link_to 'Edit', edit_photo_path(photo)
         %td= link_to 'Destroy', photo, :method => :delete, :data => { :confirm => 'Are you sure?' }
